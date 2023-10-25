@@ -19,6 +19,11 @@ class User(db.Model):
     def __init__(self, username):
         self.username = username
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
 @app.route('/create_user', methods=['GET', 'POST'])
 def create_user():
     if request.method == 'POST':
@@ -32,7 +37,7 @@ def create_user():
 @app.route('/users')
 def user_list():
     users = User.query.all()
-    return render_template('user_list.html', users=users)
+    return render_template('users.html', users=users)
 
 @app.route('/users/<int:id>', methods=['GET'])
 def get_user(id):
