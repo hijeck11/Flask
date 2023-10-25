@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Простое приложение</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_index.css') }}">
 </head>
 <body>
-<p>Hello, World!</p>
-<p>Hello, World!</p>
-<p>Hello, World!</p>
-<p>Hello, World!</p>
-<p>Hello, World!</p>
+    <p>Здравствуйте! Предлагаем Вам пройти регистрацию на мероприятие!</p>
+    <br>
+    <button><a href="/create_user">Быстрая регистрация</a></button>
 </body>
 </html>
